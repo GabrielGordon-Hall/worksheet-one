@@ -21,9 +21,8 @@ class Deque<T> {
             pointerPrev = pointer
             pointer = pointer.next
         }
-        val res = pointer?.value
         pointerPrev?.next = null
-        return res
+        return pointer?.value
     }
 
     fun unshift(value: T) {
